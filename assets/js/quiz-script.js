@@ -28,7 +28,8 @@ function setupNewQuestion() {
     let answerList = newQuestion["answers"].slice();
     // Assign an answer to each button
     for (let button of buttons) {
-        button.innerHTML = answerList.shift();
+        let ans = answerList.shift();
+        button.innerHTML = button.getAttribute("data-option") + ". " + ans;
     }
 }
 
@@ -41,7 +42,10 @@ function populateQuestions() {
         "Who is pictured in the oldest photograph of a US president?",
         ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"]
     );
-
+    addQuestion(questionsArray,
+        "Another question",
+        ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"]
+    );
     return questionsArray;
 }
 
