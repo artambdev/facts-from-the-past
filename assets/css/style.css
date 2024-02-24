@@ -14,8 +14,37 @@
 body {
     background-color: #ACC2FF;
     font-family:"Lato", sans-serif;
+    /* Take up the entire page */
+    min-height: 100vh;
+    /* Enable flexbox styling on all body element children */
+    display: flex;
+    flex-direction: column;
 }
 
+/* All headings */
 h1, h2, h3 {
+    /* Set alternate font for headings */
     font-family:"Noto Sans", sans-serif;
+}
+
+/* Header styling */
+header {
+    /* Fill the full top of the screen */
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    /* Adjust flexbox parameters */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Main content styling */
+main {
+    /* Take up any surplus space */
+    flex: 1 0 auto;
+    /* Push down somewhat so nav bar does not cover main content*/
+    margin-top: 62px;
+    /* Enable flex properties for any child elements */
+    display: flex;
+    flex-direction: column;
 }
