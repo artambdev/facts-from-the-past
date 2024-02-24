@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", function() {
         questionList:questions,
     }
 
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"]]["correct"];
+            if (button.getAttribute("data-answer") === correctAnswer) {
+                alert("Correct! Good job!");
+            } else {
+                alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}`);
+            }
+            setupNewQuestion();
+        })
+    }
+
     setupNewQuestion();
 })
 
@@ -30,6 +42,7 @@ function setupNewQuestion() {
     for (let button of buttons) {
         let ans = answerList.shift();
         button.innerHTML = button.getAttribute("data-option") + ". " + ans;
+        button.setAttribute("data-answer", ans);
     }
 }
 
