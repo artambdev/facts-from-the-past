@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 doIncorrectAnswer(correctAnswer);
             }
-            if (quizQuestionData["questionIndex"] >= 5) {
+            if (quizQuestionData["questionIndex"] >= 10) {
                 alert("Quiz completed!");
             } else {
                 // Move onto the next question
@@ -125,6 +125,31 @@ function populateQuestions() {
         "Which of these ancient civilisations was the last to fall?",
         ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"],
         "The Aztec Empire fell to Spanish conquistadors (soldier-explorers) in 1521."
+    );
+    addQuestion(questionsArray,
+        "How old was Queen Elizabeth II when she was crowned?",
+        ["27", "24", "31", "29"],
+        "The late queen was 27 when she she was crowned in 1952."
+    );
+    addQuestion(questionsArray,
+        "Which of these countries has the most castles?",
+        ["Italy", "Ireland", "France", "Germany"],
+        "Italy has the most castles of any country, with over 45,000!"
+    );
+    addQuestion(questionsArray,
+        "Which Ancient Greek deity was the temple known as the Parthenon dedicated to?",
+        ["Athena", "Zeus", "Poseidon", "Demeter"],
+        "The Parthenon was built in thanksgiving to Athena, the war goddess, after a victory against the Persians."
+    );
+    addQuestion(questionsArray,
+        "What type of fabric did Ancient China invent?",
+        ["Silk", "Velvet", "Satin", "Lace"],
+        "Silk was first produced by Ancient China in the 4th millenium BC, and would only be exported via the Silk Road 3 millenia later."
+    );
+    addQuestion(questionsArray,
+        "Which of these businesses did George Washington establish after his term as president?",
+        ["Distillery", "Antique Store", "Law Firm", "Lumberyard"],
+        "To supplement the dwindling profits from his plantations, George Washington set up a distillery to make whiskey."
     );
     return questionsArray;
 }
