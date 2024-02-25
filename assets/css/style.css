@@ -83,3 +83,37 @@ main {
     text-align: center;
     padding: 1rem 0;
 }
+
+#buttons-area {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0%;
+}
+
+.ans-button {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 6rem;
+    font-size: 100%;
+    /* Outset border */
+    border: 1px outset #23252c;
+}
+
+.button-blue {
+    background-color: #69daff;
+}
+
+.button-pink {
+    background-color: #ffacb8;
+}
+
+.button-grey {
+    background-color: #424656;
+    /* Invert text color, since it's hard to read otherwise */
+    color: #fafafa;
+}
+
+.button-gold {
+    background-color: #dfbf86;
+}
