@@ -73,3 +73,13 @@ main {
 .back-button {
     padding: 0px 20px;
 }
+
+#question-index {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#question-text {
+    text-align: center;
+    padding: 1rem 0;
+}

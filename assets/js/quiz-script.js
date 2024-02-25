@@ -34,6 +34,8 @@ function setupNewQuestion() {
     let buttons = document.getElementsByTagName("button");
     shuffleArray(buttons);
 
+    document.getElementById("question-index").innerHTML = "Question " + quizQuestionData["questionIndex"];
+
     document.getElementById("question-text").innerHTML = newQuestion["text"];
 
     // Clone the list of answers so we're not actually changing it
