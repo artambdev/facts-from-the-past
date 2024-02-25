@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 doIncorrectAnswer(correctAnswer);
             }
-            // Move onto the next question
-            setupNewQuestion();
+            if (quizQuestionData["questionIndex"] >= 5) {
+                alert("Quiz completed!");
+            } else {
+                // Move onto the next question
+                setupNewQuestion();
+            }
         })
     }
 
