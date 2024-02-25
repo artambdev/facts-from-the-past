@@ -10,13 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
     quizQuestionData = {
         questionIndex:0,
         questionList:questions,
+        correctAnswers:0,
     }
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"]]["correct"];
             if (button.getAttribute("data-answer") === correctAnswer) {
-                alert("Correct! Good job!");
+                doCorrectAnswer();
             } else {
                 alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}`);
             }
@@ -48,6 +49,14 @@ function setupNewQuestion() {
     }
 }
 
+function doCorrectAnswer() {
+    alert("Correct! Good job!");
+    quizQuestionData["correctAnswers"]++;
+    let correctAnswers = quizQuestionData["correctAnswers"];
+    let totalQuestionsAnswered = correctAnswers + quizQuestionData["questionIndex"] - 1;
+    document.getElementById("score-text").innerHTML = `Your score: ${correctAnswers} / ${totalQuestionsAnswered}`
+}
+
 /** 
  * Creates the list of questions to use throughout the quiz
  */
@@ -58,8 +67,16 @@ function populateQuestions() {
         ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"]
     );
     addQuestion(questionsArray,
-        "Another question",
-        ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"]
+        "What was the name of the first dog to be launched into orbit by the Soviet Union?",
+        ["Laika", "Tsygan", "Dezik", "Yuri"]
+    );
+    addQuestion(questionsArray,
+        "Alexander the Great was the king of which Ancient Greek kingdom?",
+        ["Macedonia", "Illyria", "Paeonia", "Thrace"]
+    );
+    addQuestion(questionsArray,
+        "Which of the following was NOT the code-name of a beach at the Normandy Landings during World War II?",
+        ["Idaho", "Utah", "Gold", "Sword"]
     );
     return questionsArray;
 }

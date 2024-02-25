@@ -26,10 +26,13 @@ body {
 h1, h2, h3 {
     /* Set alternate font for headings */
     font-family:"Noto Sans", sans-serif;
+    /* Center text unless set otherwise */
+    text-align: center;
 }
 
-/* Remove anchors changing colour when clicked */
+/* All anchor elements */
 a {
+    /* Remove the change to default purple when clicked on */
     color: #2d2933;
     text-decoration: none;
 }
@@ -74,6 +77,10 @@ main {
     padding: 0px 20px;
 }
 
+#question-section {
+    width: 100%;
+}
+
 #question-index {
     text-align: center;
     padding: 1rem 0;
@@ -86,16 +93,17 @@ main {
 
 #buttons-area {
     position: fixed;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     bottom: 0%;
 }
 
 .ans-button {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     min-height: 6rem;
-    font-size: 100%;
+    font-size: 150%;
     /* Outset border */
     border: 1px outset #23252c;
 }
