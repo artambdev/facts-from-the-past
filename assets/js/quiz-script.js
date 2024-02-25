@@ -15,12 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"]]["correct"];
+            let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["correct"];
+            console.log(correctAnswer)
             if (button.getAttribute("data-answer") === correctAnswer) {
+                console.log("Test");
                 doCorrectAnswer();
             } else {
-                alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}`);
+                console.log("Test 3");
+                doIncorrectAnswer(correctAnswer);
             }
+            console.log("Test2");
             setupNewQuestion();
         })
     }
@@ -52,8 +56,17 @@ function setupNewQuestion() {
 function doCorrectAnswer() {
     alert("Correct! Good job!");
     quizQuestionData["correctAnswers"]++;
+    updateScoreCounter();
+}
+
+function doIncorrectAnswer(correctAnswer) {
+    alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}`);
+    updateScoreCounter();
+}
+
+function updateScoreCounter() {
     let correctAnswers = quizQuestionData["correctAnswers"];
-    let totalQuestionsAnswered = correctAnswers + quizQuestionData["questionIndex"] - 1;
+    let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
     document.getElementById("score-text").innerHTML = `Your score: ${correctAnswers} / ${totalQuestionsAnswered}`
 }
 
@@ -78,6 +91,11 @@ function populateQuestions() {
         "Which of the following was NOT the code-name of a beach at the Normandy Landings during World War II?",
         ["Idaho", "Utah", "Gold", "Sword"]
     );
+    addQuestion(questionsArray,
+        "Which of these ancient civilisations was the last to fall?",
+        ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"]
+    );
+    console.log(questionsArray);
     return questionsArray;
 }
 
@@ -86,7 +104,7 @@ function populateQuestions() {
  * The first answer should be the "correct" one, the rest are incorrect
  */
 function addQuestion(list, questionText, questionAnswers) {
-    let newQuestion = {text:questionText, answers:questionAnswers, correct: questionAnswers[0]};
+    let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0]};
     newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
     list.push(newQuestion);
 }
