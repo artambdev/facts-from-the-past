@@ -13,6 +13,7 @@
 /* General styles for whole page */
 body {
     background-color: #ACC2FF;
+    color: #2d2933;
     font-family:"Lato", sans-serif;
     /* Take up the entire page */
     min-height: 100vh;
@@ -27,6 +28,12 @@ h1, h2, h3 {
     font-family:"Noto Sans", sans-serif;
 }
 
+/* Remove anchors changing colour when clicked */
+a {
+    color: #2d2933;
+    text-decoration: none;
+}
+
 /* Header styling */
 header {
     /* Fill the full top of the screen */
@@ -35,7 +42,7 @@ header {
     width: 100%;
     /* Adjust flexbox parameters */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .logo-box {
@@ -43,6 +50,12 @@ header {
     /* Adjust flexbox parameters */
     align-items: center;
     justify-content: flex-start;
+}
+
+.logo {
+    padding: 0px 20px;
+    flex-grow: 5;
+    text-align: center;
 }
 
 /* Main content styling */
@@ -54,4 +67,9 @@ main {
     /* Enable flex properties for any child elements */
     display: flex;
     flex-direction: column;
+}
+
+/* Quiz page styling */
+.back-button {
+    padding: 0px 20px;
 }
