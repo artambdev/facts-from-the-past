@@ -48,6 +48,7 @@ header {
     justify-content: space-evenly;
 }
 
+/* Div containing the logo and sometimes the back button */
 .logo-box {
     display: flex;
     /* Adjust flexbox parameters */
@@ -55,9 +56,13 @@ header {
     justify-content: flex-start;
 }
 
+/* Logo on both index and quiz pages */
 .logo {
+    /* Add some breathing room */
     padding: 0px 20px;
+    /* Let it eat up most of the header */
     flex-grow: 5;
+    /* Center the text */
     text-align: center;
 }
 
@@ -72,25 +77,55 @@ main {
     flex-direction: column;
 }
 
+/* Index page styling */
+
+#intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text inviting people to take the quiz */
+#intro-text {
+    font-size: 150%;
+    padding: 20px;
+}
+
+/* Take The Quiz button */
+#take-quiz-button {
+    /* Add some room to the sides of the text */
+    padding: 20px;
+    /* Make much bigger */
+    min-width: 6rem;
+    min-height: 4rem;
+    font-size:200%;
+}
+
 /* Quiz page styling */
+
+/* Button to go back to the homepage */
 .back-button {
     padding: 0px 20px;
 }
 
+/* Div containing the entire main content quiz area */
 #question-section {
     width: 100%;
 }
 
+/* "Question 1" heading */
 #question-index {
     text-align: center;
     padding: 1rem 0;
 }
 
+/* Text of the question itself */
 #question-text {
     text-align: center;
     padding: 1rem 0;
 }
 
+/* Div containing all the answer buttons */
 #buttons-area {
     position: fixed;
     width: 100%;
@@ -100,6 +135,7 @@ main {
     bottom: 0%;
 }
 
+/* All answer buttons A to D */
 .ans-button {
     width: 100%;
     min-height: 6rem;
@@ -108,20 +144,24 @@ main {
     border: 1px outset #23252c;
 }
 
+/* A button */
 .button-blue {
     background-color: #69daff;
 }
 
+/* B button */
 .button-pink {
     background-color: #ffacb8;
 }
 
+/* C button */
 .button-grey {
     background-color: #424656;
     /* Invert text color, since it's hard to read otherwise */
     color: #fafafa;
 }
 
+/* D button */
 .button-gold {
     background-color: #dfbf86;
 }

@@ -122,7 +122,6 @@ function populateQuestions() {
         ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"],
         "The Aztec Empire fell to Spanish conquistadors in 1521."
     );
-    console.log(questionsArray);
     return questionsArray;
 }
 
