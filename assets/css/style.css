@@ -107,7 +107,9 @@ main {
 
 /* Button to go back to the homepage */
 .back-button {
-    padding: 0px 20px;
+    padding: 10px 20px;
+    /* Increase chevron size */
+    font-size: 150%;
 }
 
 /* Div containing the entire main content quiz area */
@@ -212,7 +214,11 @@ main {
         justify-content: space-evenly;
     }
 
+    /* Button to go back to homepage */
     .back-button {
+        /* Expand button so the clickable area fills the box */
+        padding: 20px 20px;
+        /* Increase chevron size */
         font-size: 200%;
     }
 
