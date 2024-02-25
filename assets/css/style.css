@@ -38,6 +38,13 @@ header {
     justify-content: space-between;
 }
 
+.logo-box {
+    display: flex;
+    /* Adjust flexbox parameters */
+    align-items: center;
+    justify-content: flex-start;
+}
+
 /* Main content styling */
 main {
     /* Take up any surplus space */
