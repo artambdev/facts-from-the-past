@@ -215,4 +215,16 @@ main {
     .back-button {
         font-size: 200%;
     }
+
+    /* Div containing all the answer buttons */
+    #buttons-area {
+        width: 70%;
+        left: 15%;
+        right: 15%;
+        bottom: 15%;
+    }
+
+    .ans-button {
+        width: 50%;
+    }
 }

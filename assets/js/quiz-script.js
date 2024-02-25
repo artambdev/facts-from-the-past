@@ -110,17 +110,17 @@ function populateQuestions() {
     addQuestion(questionsArray,
         "Alexander the Great was the king of which Ancient Greek kingdom?",
         ["Macedonia", "Illyria", "Paeonia", "Thrace"],
-        "Alexander was the king of Macedonia - those other kingdoms were its neighbours."
+        "Alexander III was the king of Macedonia - the other listed kingdoms were its neighbours."
     );
     addQuestion(questionsArray,
-        "Which of the following was NOT the code-name of a beach at the Normandy Landings during World War II?",
+        "Which of the following was NOT the code-name of a beach at the 1944 Normandy Landings during World War II?",
         ["Idaho", "Utah", "Gold", "Sword"],
         "The five beaches at Normandy were Utah, Omaha, Gold, Sword and Juno."
     );
     addQuestion(questionsArray,
         "Which of these ancient civilisations was the last to fall?",
         ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"],
-        "The Aztec Empire fell to Spanish conquistadors in 1521."
+        "The Aztec Empire fell to Spanish conquistadors (soldier-explorers) in 1521."
     );
     return questionsArray;
 }
