@@ -44,6 +44,8 @@ header {
     z-index: 100;
     width: 100%;
     /* Adjust flexbox parameters */
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -164,4 +166,53 @@ main {
 /* D button */
 .button-gold {
     background-color: #dfbf86;
+}
+
+/* Media query: tablets and larger (768px)*/
+@media screen and (min-width: 768px) {
+
+    /* Div containing the logo */
+    .logo-box {
+        /* Add a pink box around the logo */
+        margin: 20px 0px;
+        background-color:#ffacb8;
+        /* Outset border */
+        border: 1px outset #23252c;
+    }
+
+    /* Logo header */
+    .logo {
+        /* Increase text size to maintain readability */
+        font-size: 250%;
+    }
+
+    /* Main content styling */
+    main {
+        /* Push down further, as the header is larger */
+        margin-top: 92px;
+    }
+
+    /* Div containing the "go back" button */
+    #back-box {
+        /* Fix at top-left of screen */
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        /* Make decently large */
+        width: 4rem;
+        height: 4rem;
+        /* Pink to stand out */
+        background-color: #ffacb8;
+        /* Outset border */
+        border: 1px outset #23252c;
+
+        /* Place the button itself perfectly centered */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .back-button {
+        font-size: 200%;
+    }
 }
