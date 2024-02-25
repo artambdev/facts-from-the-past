@@ -100,7 +100,7 @@ main {
     /* Make much bigger */
     min-width: 6rem;
     min-height: 4rem;
-    font-size:200%;
+    font-size: 200%;
 }
 
 /* Quiz page styling */
@@ -131,12 +131,15 @@ main {
 
 /* Div containing all the answer buttons */
 #buttons-area {
+    /* Stick to bottom of screen */
     position: fixed;
+    bottom: 0%;
+    /* Fill entire width of screen */
     width: 100%;
+    /* Enable flex display of buttons */
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    bottom: 0%;
 }
 
 /* All answer buttons A to D */
@@ -224,13 +227,16 @@ main {
 
     /* Div containing all the answer buttons */
     #buttons-area {
+        /* Take up a smaller portion of the screen */
         width: 70%;
         left: 15%;
         right: 15%;
         bottom: 15%;
     }
 
+    /* Answer buttons A to D */
     .ans-button {
+        /* Place into a 2x2 grid */
         width: 50%;
     }
 }
