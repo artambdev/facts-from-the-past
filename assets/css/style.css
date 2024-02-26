@@ -43,6 +43,10 @@ header {
     position: fixed;
     z-index: 100;
     width: 100%;
+    /* Add pink background */
+    background-color:#ffacb8;
+    /* Shadow */
+    box-shadow: 0 1px 2px #23252c;
     /* Adjust flexbox parameters */
     display: flex;
     flex-wrap: nowrap;
@@ -178,8 +182,8 @@ main {
     display: none;
     /* Display in middle of screen */
     position: fixed;
-    width: 80%;
-    height: 30%;
+    min-width: 80%;
+    min-height: 30%;
     top: 20%;
     left: 10%;
     right: 10%;
@@ -195,19 +199,53 @@ main {
     align-items: center;
 }
 
+/* "Quiz Completed!" header of the popup */
 #completed-header {
     text-align: center;
     text-decoration: underline;
     padding: 1rem;
 }
 
+/* Text detailing the player's score and a little message */
 #completed-text {
     text-align: center;
     padding: 1rem;
 }
 
+#completed-button-area {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.completed-button form {
+    width: 30%;
+}
+
+.completed-button {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 100%;
+
+    /* Outset border */
+    border: 1px outset #23252c;
+    /* Shadow */
+    box-shadow: 0 1px 2px #23252c;
+
+    background-color: #dfbf86;
+}
+
 /* Media query: tablets and larger (768px)*/
 @media screen and (min-width: 768px) {
+
+    /* Header styling */
+    header {
+        /* Make completely transparent */
+        background-color: #ff111100;
+        /* Disable shadow */
+        box-shadow: none;
+    }
 
     /* Div containing the logo */
     .logo-box {
