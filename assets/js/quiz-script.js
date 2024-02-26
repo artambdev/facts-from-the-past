@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 doIncorrectAnswer(correctAnswer);
             }
-            if (quizQuestionData["questionIndex"] >= 10) {
-                alert("Quiz completed!");
+            // Show the quiz completion popup after answering question 10
+            if (quizQuestionData["questionIndex"] >= 2) {
+                completeQuiz();
             } else {
                 // Move onto the next question
                 setupNewQuestion();
@@ -85,6 +86,11 @@ function doIncorrectAnswer(correctAnswer) {
     let factoid = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"];
     alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}. ${factoid}`);
     updateScoreCounter();
+}
+
+function completeQuiz() {
+    let popup = document.getElementById("completed-popup");
+    popup.style.display = "flex";
 }
 
 /**

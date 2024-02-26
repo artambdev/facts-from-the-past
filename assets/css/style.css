@@ -181,8 +181,12 @@ main {
     width: 80%;
     height: 6rem;
     top: 20%;
+    left: 10%;
+    right: 10%;
 
-    display: flex;
+    background-color: #ffacb8;
+
+    /* Flex properties for children, but not set as flex yet */
     flex-direction: column;
     align-items: center;
 }
