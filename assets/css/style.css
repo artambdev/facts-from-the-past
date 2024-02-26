@@ -92,15 +92,23 @@ main {
 }
 
 /* Text inviting people to take the quiz */
-#intro-text {
+.intro-text {
+    /* Set bigger font size */
     font-size: 150%;
+    /* Add a bit of space around it */
     padding: 20px;
+    /* Center the text */
+    text-align: center;
+    /* Keep some distance from the edges of the screen */
+    max-width: 80%;
 }
 
 /* Take The Quiz button */
 #take-quiz-button {
     /* Add some room to the sides of the text */
     padding: 20px;
+    /* Give the button some breathing room */
+    margin: 20px;
     /* Make much bigger */
     min-width: 6rem;
     min-height: 4rem;
