@@ -11,11 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         questionIndex:0,
         questionList:questions,
         correctAnswers:0,
+        completed:false,
     }
 
     // For each button, add the code for checking if the answer is correct or not
     for (let button of buttons) {
         button.addEventListener("click", function() {
+            if (quizQuestionData["completed"] === true) {
+                return;
+            }
             // Get the correct answer (remember: question index has already incremented to the next question by this point)
             let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["correct"];
             // Display the correct alert depending on if the answer stored in the button is a match
@@ -48,7 +52,7 @@ function setupNewQuestion() {
     quizQuestionData["questionIndex"]++;
 
     // Get all the buttons, and shuffle them so we assign answers in a random order
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("ans-button");
     shuffleArray(buttons);
 
     // Change the question number
@@ -88,8 +92,12 @@ function doIncorrectAnswer(correctAnswer) {
     updateScoreCounter();
 }
 
+/**
+ * Pop up the message box for completing the quiz and give it the correct data
+ */
 function completeQuiz() {
     let correctAnswers = quizQuestionData["correctAnswers"];
+    quizQuestionData["completed"] = true;
     let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
     let extraComment = "Great job!"
     if (correctAnswers === totalQuestionsAnswered) {
