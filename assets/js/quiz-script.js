@@ -103,7 +103,7 @@ function completeQuiz() {
     if (correctAnswers === totalQuestionsAnswered) {
         extraComment = "Flawless! You're a history master!"
     } else if (correctAnswers === 0) {
-        extraComment = "That's very unfortunate. Maybe try again, and you might get one correct?"
+        extraComment = "That's very unfortunate. Maybe try again with the knowledge you've gained?"
     } else if (correctAnswers / totalQuestionsAnswered <= 0.5) {
         extraComment = "Consider trying the quiz again and using what you've learned!"
     }
