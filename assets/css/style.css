@@ -220,6 +220,7 @@ main {
     padding: 1rem;
 }
 
+/* Div containing the buttons to retry or return */
 #completed-button-area {
     width: 60%;
     display: flex;
@@ -227,11 +228,14 @@ main {
     justify-content: space-evenly;
 }
 
+/* Form responsible for the button's page-changing */
 .completed-button form {
     width: 30%;
 }
 
+/* Buttons to return or retry */
 .completed-button {
+    /* Increase size to a reasonable amount, plus breathing room */
     padding: 1rem;
     margin: 1rem;
     font-size: 100%;
@@ -241,7 +245,15 @@ main {
     /* Shadow */
     box-shadow: 0 1px 2px #23252c;
 
+    /* Golden color */
     background-color: #dfbf86;
+}
+
+/* Return button in popup */
+#completed-back-button {
+    /* Invert since it's not as exciting as doing more history */
+    background-color: #424656;
+    color: #fafafa;
 }
 
 /* Media query: tablets and larger (768px)*/
@@ -323,6 +335,16 @@ main {
         /* Place into a 2x2 grid */
         width: 50%;
     }
+
+    /* Quiz completion popup */
+    #completed-popup {
+        /* Display smaller, closer to middle of screen*/
+        min-width: 40%;
+        min-height: 30%;
+        top: 30%;
+        left: 30%;
+        right: 30%;
+    }
 }
 
 /* Laptops and larger */
@@ -330,9 +352,10 @@ main {
 
     /* All buttons when hovered */
     button:hover {
-        /* Change to white when hovered */
-        background-color: #fafafa;
-        color: #23252c;
+        /* Change to white when hovered
+        Needs to be important to beat the specificity of an ID selector */
+        background-color: #fafafa !important;
+        color: #23252c !important;
     }
 
     /* Back button's containing box when it is hovered*/
