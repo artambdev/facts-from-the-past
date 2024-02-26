@@ -130,51 +130,61 @@ function populateQuestions() {
     addQuestion(questionsArray,
         "Who is pictured in the oldest photograph of a US president?",
         ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"],
+        "mount-rushmore",
         "A photo of John Quincy Adams dates back to 1843."
     );
     addQuestion(questionsArray,
         "What was the name of the first dog to be launched into orbit by the Soviet Union?",
         ["Laika", "Tsygan", "Dezik", "Yuri"],
+        "laika",
         "Laika was the first dog in orbit, though Tsygan and Dezik were launched together into sub-orbit before her."
     );
     addQuestion(questionsArray,
         "Alexander the Great was the king of which Ancient Greek kingdom?",
         ["Macedonia", "Illyria", "Paeonia", "Thrace"],
+        "alexander",
         "Alexander III was the king of Macedonia - the other listed kingdoms were its neighbours."
     );
     addQuestion(questionsArray,
         "Which of the following was NOT the code-name of a beach at the 1944 Normandy Landings during World War II?",
         ["Idaho", "Utah", "Gold", "Sword"],
+        "normandy",
         "The five beaches at Normandy were Utah, Omaha, Gold, Sword and Juno."
     );
     addQuestion(questionsArray,
         "Which of these ancient civilisations was the last to fall?",
         ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"],
+        "pantheon",
         "The Aztec Empire fell to Spanish conquistadors (soldier-explorers) in 1521."
     );
     addQuestion(questionsArray,
         "How old was Queen Elizabeth II when she was crowned?",
         ["27", "24", "31", "29"],
+        "queen-elizabeth",
         "The late queen was 27 when she she was crowned in 1952."
     );
     addQuestion(questionsArray,
         "Which of these countries has the most castles?",
         ["Italy", "Ireland", "France", "Germany"],
+        "castle",
         "Italy has the most castles of any country, with over 45,000!"
     );
     addQuestion(questionsArray,
         "Which Ancient Greek deity was the temple known as the Parthenon dedicated to?",
         ["Athena", "Zeus", "Poseidon", "Demeter"],
+        "greek-gods",
         "The Parthenon was built in thanksgiving to Athena, the war goddess, after a victory against the Persians."
     );
     addQuestion(questionsArray,
         "What type of fabric did Ancient China invent?",
         ["Silk", "Velvet", "Satin", "Lace"],
+        "china-textiles",
         "Silk was first produced by Ancient China in the 4th millenium BC, and would only be exported via the Silk Road 3 millenia later."
     );
     addQuestion(questionsArray,
         "Which of these businesses did George Washington establish after his term as president?",
         ["Distillery", "Antique Store", "Law Firm", "Lumberyard"],
+        "washington-house",
         "To supplement the dwindling profits from his plantations, George Washington set up a distillery to make whiskey."
     );
     return questionsArray;
@@ -184,8 +194,8 @@ function populateQuestions() {
  * Returns the questions list with one question appended 
  * The first answer should be the "correct" one, the rest are incorrect
  */
-function addQuestion(list, questionText, questionAnswers, questionFactoid) {
-    let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], factoid:questionFactoid};
+function addQuestion(list, questionText, questionAnswers, questionImage, questionFactoid) {
+    let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, factoid:questionFactoid};
     newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
     list.push(newQuestion);
 }
