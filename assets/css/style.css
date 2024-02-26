@@ -149,6 +149,14 @@ main {
     padding: 1rem 0;
 }
 
+/* Div used to display the question's image */
+#question-image {
+    /* Default coloration */
+    background-color:#2d2933;
+    min-width: 80%;
+    min-height: 40%;
+}
+
 /* Text of the question itself */
 #question-text {
     text-align: center;
