@@ -256,6 +256,10 @@ main {
     color: #fafafa;
 }
 
+footer p {
+    padding: 20px;
+}
+
 /* Media query: tablets and larger (768px)*/
 @media screen and (min-width: 768px) {
 
