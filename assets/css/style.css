@@ -105,6 +105,12 @@ main {
 
 /* Take The Quiz button */
 #take-quiz-button {
+    /* Golden color */
+    background-color: #dfbf86;
+    /* Shadow */
+    box-shadow: 0 1px 2px #23252c;
+    /* Outset border */
+    border: 1px outset #23252c;
     /* Add some room to the sides of the text */
     padding: 20px;
     /* Give the button some breathing room */
