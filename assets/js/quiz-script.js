@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 doIncorrectAnswer(correctAnswer);
             }
             // Show the quiz completion popup after answering question 10
-            if (quizQuestionData["questionIndex"] >= 2) {
+            if (quizQuestionData["questionIndex"] >= 10) {
                 completeQuiz();
             } else {
                 // Move onto the next question
