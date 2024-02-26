@@ -1,7 +1,7 @@
 let quizQuestionData = {}
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("ans-button");
 
     let questions = populateQuestions();
     // Shuffle the questions into a random order
