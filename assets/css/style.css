@@ -173,6 +173,20 @@ main {
     background-color: #dfbf86;
 }
 
+#completed-popup {
+    /* Don't show by default */
+    display: none;
+    /* Display in middle of screen */
+    position: fixed;
+    width: 80%;
+    height: 6rem;
+    top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Media query: tablets and larger (768px)*/
 @media screen and (min-width: 768px) {
 
@@ -229,6 +243,7 @@ main {
     #buttons-area {
         /* Take up a smaller portion of the screen */
         width: 70%;
+        /* Position in the middle of the screen, a bit above the bottom */
         left: 15%;
         right: 15%;
         bottom: 15%;

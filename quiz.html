@@ -15,6 +15,7 @@
 <body>
     <!-- Page header -->
     <header>
+        <!-- Button to go back to homepage -->
         <div id="back-box">
             <a class="back-button" href="index.html" aria-label="Go back to our homepage"><i class="fa-solid fa-chevron-left"></i></a>
         </div>
@@ -25,13 +26,16 @@
     </header>
 
     <main>
-        <section id = "question-section">
+        <!-- Quiz game -->
+        <section id="question-section">
+            <!-- Question content and information -->
             <div id="question-content">
                 <h2 id="question-index">Question 1</h2>
                 <h3 id="score-text">Your score: 0 / 0</h3>
                 <!-- TODO: put image here-ish -->
                 <p id="question-text">Loading question...</p>
             </div>
+            <!-- Buttons to select an answer -->
             <div id="buttons-area">
                 <button data-option="A" class="ans-button button-blue">A. </button>
                 <button data-option="B" class="ans-button button-pink">B. </button>
@@ -39,6 +43,11 @@
                 <button data-option="D" class="ans-button button-gold">D. </button>
             </div>
         </section>
+        <!-- Popup when completing the quiz -->
+        <div id="completed-popup">
+            <h1 id="completed-header">Quiz Completed!</h1>
+            <p id="completed-text">You got: </p>
+        </div>
     </main>
 
     <script src="assets/js/quiz-script.js"></script>
