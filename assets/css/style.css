@@ -91,6 +91,14 @@ main {
     align-items: center;
 }
 
+/* Main heading of the index and 404 pages */
+.main-heading {
+    /* Add some breathing room */
+    padding: 0px 20px;
+    /* Center the text */
+    text-align: center;
+}
+
 /* Text inviting people to take the quiz */
 .intro-text {
     /* Set bigger font size */
@@ -298,6 +306,12 @@ footer p {
     main {
         /* Push down further, as the header is larger */
         margin-top: 92px;
+    }
+
+    /* Main headings of index and 404 pages */
+    .main-heading {
+        /* Increase text size to maintain readability */
+        font-size: 250%;
     }
 
     /* Div containing the "go back" button */
