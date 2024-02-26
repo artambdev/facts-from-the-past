@@ -143,6 +143,12 @@ main {
     width: 100%;
 }
 
+#question-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* "Question 1" heading */
 #question-index {
     text-align: center;
@@ -153,8 +159,9 @@ main {
 #question-image {
     /* Default coloration */
     background-color:#2d2933;
-    min-width: 80%;
-    min-height: 40%;
+    width: 70%;
+    height: 240px;
+    margin: 20px;
 }
 
 /* Text of the question itself */
@@ -360,6 +367,13 @@ footer p {
         font-size: 200%;
     }
 
+    /* Div used to display the question's image */
+    #question-image {
+        width: 384px;
+        height: 216px;
+        margin: 20px;
+    }
+
     /* Div containing all the answer buttons */
     #buttons-area {
         /* Take up a smaller portion of the screen */
@@ -367,7 +381,7 @@ footer p {
         /* Position in the middle of the screen, a bit above the bottom */
         left: 15%;
         right: 15%;
-        bottom: 15%;
+        bottom: 10%;
     }
 
     /* Answer buttons A to D */
