@@ -316,3 +316,20 @@ main {
         width: 50%;
     }
 }
+
+/* Laptops and larger */
+@media screen and (min-width: 992px) {
+
+    /* All buttons when hovered */
+    button:hover {
+        /* Change to white when hovered */
+        background-color: #fafafa;
+        color: #23252c;
+    }
+
+    /* Back button's containing box when it is hovered*/
+    #back-box:hover {
+        /* Change to white when hovered */
+        background-color: #fafafa;
+    }
+}
