@@ -270,6 +270,14 @@ main {
     color: #fafafa;
 }
 
+/* 404 page main content section */
+#404-section {
+    /* Assign flexbox properties */
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
 footer p {
     padding: 20px;
 }
