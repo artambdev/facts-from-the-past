@@ -89,8 +89,20 @@ function doIncorrectAnswer(correctAnswer) {
 }
 
 function completeQuiz() {
+    let correctAnswers = quizQuestionData["correctAnswers"];
+    let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
+    let extraComment = "Great job!"
+    if (correctAnswers === totalQuestionsAnswered) {
+        extraComment = "Flawless! You're a history master!"
+    } else if (correctAnswers === 0) {
+        extraComment = "That's very unfortunate. Maybe try again, and you might get one correct?"
+    } else if (correctAnswers / totalQuestionsAnswered <= 0.5) {
+        extraComment = "Consider trying the quiz again and using what you've learned!"
+    }
+
     let popup = document.getElementById("completed-popup");
     popup.style.display = "flex";
+    popup.children[1].innerHTML = `Congratulations! You got ${correctAnswers} of the ${totalQuestionsAnswered} questions correct. ${extraComment}`
 }
 
 /**
