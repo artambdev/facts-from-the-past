@@ -22,13 +22,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             // Get the correct answer (remember: question index has already incremented to the next question by this point)
             let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["correct"];
-            // Display the correct alert depending on if the answer stored in the button is a match
-            if (button.getAttribute("data-answer") === correctAnswer) {
-                doCorrectAnswer();
-            } else {
-                doIncorrectAnswer(correctAnswer);
+            // Figure out if the button's corresponding answer was the correct one'
+            let wasCorrect = button.getAttribute("data-answer") === correctAnswer;
+            // If correct, increment the player's score
+            if (wasCorrect) {
+                quizQuestionData["correctAnswers"]++;
             }
-            showAnsweredPopup();
+            // Increment the score counter appropriately
+            updateScoreCounter();
+            // Show the post-answer popup
+            showAnsweredPopup(correctAnswer, wasCorrect);
         })
     }
 
@@ -48,10 +51,20 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * Display the post-answer popup
  */
-function showAnsweredPopup() {
+function showAnsweredPopup(correctAnswer, wasCorrect) {
     let popup = document.getElementById("answered-popup");
 
+    popup.style.display = "flex";
 
+    let factoid = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"];
+
+    if (wasCorrect) {
+        popup.children[0].innerHTML = "Correct!";
+        popup.children[1].innerHTML = `Good job! ${factoid}`;
+    } else {
+        popup.children[0].innerHTML = "Sadly, incorrect...";
+        popup.children[1].innerHTML = `Not quite. The correct answer was: ${correctAnswer}. ${factoid}`;
+    }
 }
 
 /**
