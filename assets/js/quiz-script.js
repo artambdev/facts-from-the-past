@@ -59,7 +59,7 @@ function setupNewQuestion() {
     document.getElementById("question-index").innerHTML = "Question " + quizQuestionData["questionIndex"];
 
     // Set the image
-    document.getElementById("question-image").style.background = "url('../assets/images/quiz-images/" + newQuestion["imageName"] + ".jpg') no-repeat center center/contain"; 
+    document.getElementById("question-image").style.background = "url('./assets/images/quiz-images/" + newQuestion["imageName"] + ".jpg') no-repeat center center/contain"; 
 
     // Display the question itself
     document.getElementById("question-text").innerHTML = newQuestion["text"];
