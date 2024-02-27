@@ -443,6 +443,16 @@ footer p {
     }
 
     /* Quiz completion popup */
+    #answered-popup {
+        /* Display smaller, closer to middle of screen*/
+        min-width: 40%;
+        min-height: 30%;
+        top: 30%;
+        left: 30%;
+        right: 30%;
+    }
+
+    /* Quiz completion popup */
     #completed-popup {
         /* Display smaller, closer to middle of screen*/
         min-width: 40%;
