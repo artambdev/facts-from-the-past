@@ -49,6 +49,13 @@ The three pages are:
 - A quiz page that contains the interactive quiz itself
 - A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
 
+## Bugs
+Notable bugs found during development:
+
+- Once new questions were added with different correct answers, the quiz would reject any answer given and suggest an answer from another question entirely (for example, possibly suggesting that the first dog in orbit's name was the Aztec Empire). It was discovered that this is because the question list's index has already moved onto the next question once it has finished setting up the page. Checking the "previous" question solved this issue.
+- After adding a white highlight when hovering buttons, the highlight function was broken only on the button on the quiz-completion popup to return to the homepage. It turns out this was because that button is the only one whose background and text color are determined by a CSS styling using an ID selector, which has a higher specificity than the CSS style used to style all hovered buttons. This was solved by using the "!important" affix on the hovered-button style's properties to give it a higher specificity that beats that of an ID selector.
+- Scaling the questions' images with the screen size often cause the images to cause there to be a highly inconsistent amount of space on larger screens for the question's text, sometimes hiding it entirely behind the answer buttons. This was solved by giving the images a fixed size targeted for the smaller of the larger screens (i.e tablets).
+
 ## Deployment
 The website was deployed with GitHub's deployment platform, GitHub Pages. The following steps were followed:
 - Click on the "Settings" tab of the project's repository
