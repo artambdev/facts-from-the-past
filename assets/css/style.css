@@ -85,6 +85,7 @@ main {
 
 /* Index page styling */
 
+/* Section containing the introduction */
 #intro-section {
     display: flex;
     flex-direction: column;
@@ -143,6 +144,7 @@ main {
     width: 100%;
 }
 
+/* Div containing all information about the question */
 #question-content {
     display: flex;
     flex-direction: column;
@@ -226,6 +228,7 @@ main {
     left: 10%;
     right: 10%;
 
+    /* Set pink background */
     background-color: #ffacb8;
     /* Outset border */
     border: 1px outset #23252c;
@@ -277,6 +280,7 @@ main {
     left: 10%;
     right: 10%;
 
+    /* Set pink background */
     background-color: #ffacb8;
     /* Outset border */
     border: 1px outset #23252c;

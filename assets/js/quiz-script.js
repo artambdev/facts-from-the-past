@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // For each button, add the code for checking if the answer is correct or not
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (quizQuestionData["completed"] === true) {
+            if (quizQuestionData["completed"] === true || window.getComputedStyle(document.getElementById("answered-popup")).display === "flex" || window.getComputedStyle(document.getElementById("completed-popup")).display === "flex") {
                 return;
             }
             // Get the correct answer (remember: question index has already incremented to the next question by this point)
