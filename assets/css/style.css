@@ -410,11 +410,13 @@ footer p {
         Needs to be important to beat the specificity of an ID selector */
         background-color: #fafafa !important;
         color: #23252c !important;
+        transition: color, background-color ease-out 150ms;
     }
 
     /* Back button's containing box when it is hovered*/
     #back-box:hover {
         /* Change to white when hovered */
         background-color: #fafafa;
+        transition: background-color ease-out 150ms;
     }
 }
