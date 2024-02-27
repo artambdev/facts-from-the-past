@@ -40,6 +40,15 @@ The wireframes are presented below:
 ### Font
 - Headings use the Noto Sans font while other text uses the Lato font. Both are popular sans-serif fonts that are easy to read and suitable for viewing on screens. In case of a failure to load, they both default to the browser's default sans-serif font.
 
+## Features
+The website has 3 pages and (TODO: put a number here) features across them.
+
+### Pages
+The three pages are:
+- A homepage that users to the site are automatically brought to, explaining the website's purpose and the quiz ahead with a button to begin
+- A quiz page that contains the interactive quiz itself
+- A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
+
 temp sources
 
 Presidential photo question: https://wikipedia.com
