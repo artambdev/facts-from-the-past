@@ -49,15 +49,33 @@ The three pages are:
 - A quiz page that contains the interactive quiz itself
 - A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
 
-temp sources
+## Credits
+Public domain or free-with-attribution images used:
+- Presidential photos question: <a href="https://en.wikipedia.org/wiki/Mount_Rushmore#/media/File:Mountrushmore.jpg">unknown US National Parks Service employee</a>
+- Empires question: <a href="https://pixabay.com/photos/rome-pantheon-italy-church-dome-7245470/">Leonard Niederwimmer</a>
+- China textile questions: <a href="https://commons.wikimedia.org/wiki/File:Flores_y_colores_hechos_a_mano.jpg">Lily Sanchez</a>
+- Elizabeth 2 coronation question: <a href="https://www.rct.uk/collection/2153177/queen-elizabeth-ii-b-1926nbspon-her-coronation-day">Cecil Beaton</a>
+- Alexander the Great question: <a href="https://en.wikipedia.org/wiki/Alexander_the_Great#/media/File:Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG">Charles Le Brun</a>
+- Soviet Space Dog question: <a href="https://upload.wikimedia.org/wikipedia/en/7/71/Laika_%28Soviet_dog%29.jpg">Soviet Space Program</a>
+- Normandy Landings question: <a href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg">Robert F. Sargent</a>
+- Castles question: <a href="https://en.wikipedia.org/wiki/Castle#/media/File:Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg">Ángel Sanz de Andrés</a>
+- Parthenon question: <a href="https://en.wikipedia.org/wiki/Greek_mythology#/media/File:Achilles_Penthesileia_BM_B209.jpg">Great British Museum</a>
+- George Washington question: <a href="https://commons.wikimedia.org/wiki/File:Residence_of_the_Washington_Family_on_the_Rappahannock.jpg">Washington Irving</a>
+- Icons: <a href="https://fontawesome.com/icons">FontAwesome</a>
 
-Presidential photo question: https://wikipedia.com
-Empires question: Leonard Niederwimmer https://pixabay.com/photos/rome-pantheon-italy-church-dome-7245470/
-China textile questions: Lily Sanchez https://commons.wikimedia.org/wiki/File:Flores_y_colores_hechos_a_mano.jpg
-Elizabeth 2 coronation question: Cecil Beaton https://www.rct.uk/collection/2153177/queen-elizabeth-ii-b-1926nbspon-her-coronation-day
-Alexander the Great question: Charles Le Brun https://en.wikipedia.org/wiki/Alexander_the_Great#/media/File:Charles_Le_Brun_-_Entry_of_Alexander_into_Babylon.JPG
-Soviet Space Dog question: Soviet Space Program https://upload.wikimedia.org/wikipedia/en/7/71/Laika_%28Soviet_dog%29.jpg
-Normandy Landings question: Robert F. Sargent https://upload.wikimedia.org/wikipedia/commons/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg
-Castles question: Ángel Sanz de Andrés https://en.wikipedia.org/wiki/Castle#/media/File:Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg
-Parthenon question: Great British Museum https://en.wikipedia.org/wiki/Greek_mythology#/media/File:Achilles_Penthesileia_BM_B209.jpg
-George Washington question: Washington Irving https://commons.wikimedia.org/wiki/File:Residence_of_the_Washington_Family_on_the_Rappahannock.jpg
+Technology used:
+- Languages: HTML 5, CSS, JavaScript
+- IDE: GitPod
+- Version control: GitHub
+- Deployment: GitHub's Pages feature
+- Wireframing: Balsamiq
+- Validation: W3C HTML Validator, W3C CSS Validator, WAVE Website Accessibility Evaluation Tool, Google Chrome
+- Art program: paint.net
+- Color palette design: <a href="https://mycolor.space">ColorSpace</a>
+
+Code:
+- Code for 404 page functionality was taken from <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site">GitHub's documentation for GitHub Pages</a>
+- Fisher-Yates shuffle algorithm was learned from <a href="https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/">Free Code Camp</a>
+
+Other:
+- Mo Shami for mentoring, guidance and feedback throughout the project.
