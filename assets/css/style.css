@@ -214,6 +214,58 @@ main {
     background-color: #dfbf86;
 }
 
+/* Popup after answering a question */
+#answered-popup {
+    /* Don't show by default */
+    display: none;
+    /* Display in middle of screen */
+    position: fixed;
+    min-width: 80%;
+    min-height: 30%;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+
+    background-color: #ffacb8;
+    /* Outset border */
+    border: 1px outset #23252c;
+    /* Shadow */
+    box-shadow: 0 1px 2px #23252c;
+
+    /* Flex properties for children, but not set as flex yet */
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Correct or incorrect header of answer popup */
+#answered-header {
+    text-align: center;
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+/* Text explaining the player's answer and giving a factoid */
+#answered-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Buttons to return or retry */
+.answered-continue-button {
+    /* Increase size to a reasonable amount, plus breathing room */
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 100%;
+
+    /* Outset border */
+    border: 1px outset #23252c;
+    /* Shadow */
+    box-shadow: 0 1px 2px #23252c;
+
+    /* Golden color */
+    background-color: #dfbf86;
+}
+
 #completed-popup {
     /* Don't show by default */
     display: none;
