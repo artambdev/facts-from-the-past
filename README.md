@@ -49,6 +49,24 @@ The three pages are:
 - A quiz page that contains the interactive quiz itself
 - A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
 
+## Deployment
+The website was deployed with GitHub's deployment platform, GitHub Pages. The following steps were followed:
+- Click on the "Settings" tab of the project's repository
+- On the left, under the "Code and automation" section of the settings, navigate to "Pages"
+- Under the "branch" option, select "main" and save
+- After automatically refreshing, the page will show a small banner with a link to the live site
+
+### Forking
+On this project's repository, at the upper-right-hand side, there is a "fork" button to create a fork of it.
+
+### Cloning
+On this project's repository, at the upper-right-hand side, there is a "Code" button. To clone the project, click the button and:
+- Choose between HTTPS, SSH or GitHub CLI as preferred and click the "Copy url to clipboard" button
+- Open Git Bash
+- Set the working directory to where the cloned project should be
+- Type "git clone " followed by the copied URL
+- Hit enter to create the cloned project
+
 ## Credits
 Public domain or free-with-attribution images used:
 - Presidential photos question: <a href="https://en.wikipedia.org/wiki/Mount_Rushmore#/media/File:Mountrushmore.jpg">unknown US National Parks Service employee</a>
