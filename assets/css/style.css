@@ -251,7 +251,7 @@ main {
 }
 
 /* Buttons to return or retry */
-.answered-continue-button {
+#answered-continue-button {
     /* Increase size to a reasonable amount, plus breathing room */
     padding: 1rem;
     margin: 1rem;
