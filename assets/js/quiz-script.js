@@ -28,24 +28,38 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 doIncorrectAnswer(correctAnswer);
             }
-            // Show the quiz completion popup after answering question 10
-            if (quizQuestionData["questionIndex"] >= 10) {
-                completeQuiz();
-            } else {
-                // Move onto the next question
-                setupNewQuestion();
-            }
+            showAnsweredPopup();
         })
     }
+
+    // On clicking the answered-question popup's continue button, set up the next question
+    document.getElementById("answered-continue-button").addEventListener("click", function () {
+        if (quizQuestionData["questionIndex"] >= 10) {
+            completeQuiz();
+        } else {
+            setupNewQuestion();
+        }
+    });
 
     // Trigger the very first question to be set up
     setupNewQuestion();
 })
 
 /**
+ * Display the post-answer popup
+ */
+function showAnsweredPopup() {
+    let popup = document.getElementById("answered-popup");
+
+
+}
+
+/**
  * Sets up the next question (the first and those afterwards), including changing text and updating the buttons
  */
 function setupNewQuestion() {
+    // Hide the answered popup if it's visible
+    document.getElementById("answered-popup").style.display = "none";
     // Get our new question
     let newQuestion = quizQuestionData["questionList"][quizQuestionData["questionIndex"]]
     // Increment how many questions we've done
@@ -102,17 +116,21 @@ function completeQuiz() {
     let correctAnswers = quizQuestionData["correctAnswers"];
     quizQuestionData["completed"] = true;
     let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
+    // Add a personalised comment based on the player's performance
     let extraComment = "Great job!"
     if (correctAnswers === totalQuestionsAnswered) {
         extraComment = "Flawless! You're a history master!"
     } else if (correctAnswers === 0) {
         extraComment = "That's very unfortunate. Maybe try again with the knowledge you've gained?"
     } else if (correctAnswers / totalQuestionsAnswered <= 0.5) {
-        extraComment = "Consider trying the quiz again and using what you've learned!"
+        extraComment = "Consider trying the quiz again, using what you've newly learned!"
     }
 
+    // Get the quiz-completed popup
     let popup = document.getElementById("completed-popup");
+    // Display the popup
     popup.style.display = "flex";
+    // Change the text to be appropriate to the result
     popup.children[1].innerHTML = `Congratulations! You got ${correctAnswers} of the ${totalQuestionsAnswered} questions correct. ${extraComment}`
 }
 
@@ -129,7 +147,9 @@ function updateScoreCounter() {
  * Creates the list of questions to use throughout the quiz
  */
 function populateQuestions() {
+    // Define the array we'll store questions in
     let questionsArray = [];
+    // Define and add the questions to the array
     addQuestion(questionsArray,
         "Who is pictured in the oldest photograph of a US president?",
         ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"],
@@ -199,6 +219,7 @@ function populateQuestions() {
  */
 function addQuestion(list, questionText, questionAnswers, questionImage, questionFactoid) {
     let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, factoid:questionFactoid};
+    // Shuffle the answers so they appear in a random order each time the quiz is played
     newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
     list.push(newQuestion);
 }
