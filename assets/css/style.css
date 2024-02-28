@@ -349,7 +349,7 @@ main {
 }
 
 /* 404 page main content section */
-#404-section {
+#four-oh-four-section {
     /* Assign flexbox properties */
     display:flex;
     flex-direction: column;
