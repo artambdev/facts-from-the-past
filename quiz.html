@@ -47,14 +47,17 @@
                 <button type="button" data-option="D" class="ans-button button-gold">D. </button>
             </div>
         </section>
+        <!-- Popup after each answer to explain correctness and offer a new question -->
         <div id="answered-popup">
             <h1 id="answered-header">Quiz Completed!</h1>
+            <!-- Text is manually adjusted based on if answer is correct/incorrect and what it should be -->
             <p id="answered-text">Congratulations!</p>
             <button id="answered-continue-button" aria-label="Move onto the next question">Continue</button>
         </div>
         <!-- Popup when completing the quiz -->
         <div id="completed-popup">
             <h1 id="completed-header">Quiz Completed!</h1>
+            <!-- Placeholder text updated automatically based on how the player did -->
             <p id="completed-text">Congratulations!</p>
             <div id="completed-button-area">
                 <form action="index.html" method="get" aria-label="Go back to our homepage">
@@ -67,10 +70,13 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
+        <!-- Just a footnote for fun - this is only visible on tablet or larger -->
         <p>Brought to you by Arthur Ambalov... and about six thousand years of human accomplishment!</p>
     </footer>
 
+    <!-- Add the quiz script -->
     <script src="assets/js/quiz-script.js"></script>
     <!-- FontAwesome kit for icons -->
     <script src="https://kit.fontawesome.com/1b7fb41147.js" crossorigin="anonymous"></script>
