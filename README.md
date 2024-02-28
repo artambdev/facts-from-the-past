@@ -1,6 +1,8 @@
 # Facts From the Past
 - developed by Arthur Ambalov
 
+![Image of website on different sized screens](docs/am-i-responsive.png)
+
 [Link to live webpage](https://github.com/artambdev/facts-from-the-past/)
 
 ## Table of Contents
