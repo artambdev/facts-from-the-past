@@ -1,5 +1,7 @@
+// Object which will contain all the quiz's necessary data
 let quizQuestionData = {}
 
+// When the document is first loaded, add event listeners and set up the quiz
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByClassName("ans-button");
 
@@ -54,14 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
 function showAnsweredPopup(correctAnswer, wasCorrect) {
     let popup = document.getElementById("answered-popup");
 
+    // Show the popup
     popup.style.display = "flex";
 
+    // Get the current question's factoid
     let factoid = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"];
 
+    // Alter the heading and text based on if the answer was correct or not
     if (wasCorrect) {
         popup.children[0].innerHTML = "Correct!";
         popup.children[1].innerHTML = `Good job! ${factoid}`;
     } else {
+        // Let them down lightly and tell them what they should have picked
         popup.children[0].innerHTML = "Sadly, incorrect...";
         popup.children[1].innerHTML = `Not quite. The correct answer was: ${correctAnswer}. ${factoid}`;
     }
@@ -103,25 +109,6 @@ function setupNewQuestion() {
         // Store the answer itself to check when we click it
         button.setAttribute("data-answer", ans);
     }
-}
-
-/**
- * Run when an answer was picked correctly. Display an alert, and increment the score.
- */
-function doCorrectAnswer() {
-    // At this point, the question index has already incremented, so check one back
-    alert("Correct! Good job! " + quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"]);
-    quizQuestionData["correctAnswers"]++;
-    updateScoreCounter();
-}
-
-/**
- * Run when an answer was picked incorrectly. Display an alert, and explain the answer.
- */
-function doIncorrectAnswer(correctAnswer) {
-    let factoid = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"];
-    alert(`Sadly, your answer was incorrect. The answer was: ${correctAnswer}. ${factoid}`);
-    updateScoreCounter();
 }
 
 /**
