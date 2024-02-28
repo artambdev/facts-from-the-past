@@ -1,5 +1,5 @@
 // Object which will contain all the quiz's necessary data
-let quizQuestionData = {}
+let quizQuestionData = {};
 
 // When the document is first loaded, add event listeners and set up the quiz
 document.addEventListener("DOMContentLoaded", function() {
@@ -14,32 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
         questionList:questions,
         correctAnswers:0,
         completed:false,
-    }
+    };
 
     // For each button, add the code for checking if the answer is correct or not
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (quizQuestionData["completed"] === true || window.getComputedStyle(document.getElementById("answered-popup")).display === "flex" || window.getComputedStyle(document.getElementById("completed-popup")).display === "flex") {
-                return;
-            }
-            // Get the correct answer (remember: question index has already incremented to the next question by this point)
-            let correctAnswer = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["correct"];
-            // Figure out if the button's corresponding answer was the correct one'
-            let wasCorrect = button.getAttribute("data-answer") === correctAnswer;
-            // If correct, increment the player's score
-            if (wasCorrect) {
-                quizQuestionData["correctAnswers"]++;
-            }
-            // Increment the score counter appropriately
-            updateScoreCounter();
-            // Show the post-answer popup
-            showAnsweredPopup(correctAnswer, wasCorrect);
-        })
+        button.addEventListener("click", onButtonClicked(button));
     }
 
     // On clicking the answered-question popup's continue button, set up the next question
     document.getElementById("answered-continue-button").addEventListener("click", function () {
-        if (quizQuestionData["questionIndex"] >= 10) {
+        if (quizQuestionData.questionIndex >= 10) {
             completeQuiz();
         } else {
             setupNewQuestion();
@@ -48,7 +32,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Trigger the very first question to be set up
     setupNewQuestion();
-})
+});
+
+function onButtonClicked(button) {
+    if (quizQuestionData.completed === true || window.getComputedStyle(document.getElementById("answered-popup")).display === "flex" || window.getComputedStyle(document.getElementById("completed-popup")).display === "flex") {
+        return;
+    }
+    // Get the correct answer (remember: question index has already incremented to the next question by this point)
+    let correctAnswer = quizQuestionData.questionList[quizQuestionData.questionIndex - 1].correct;
+    // Figure out if the button's corresponding answer was the correct one'
+    let wasCorrect = button.getAttribute("data-answer") === correctAnswer;
+    // If correct, increment the player's score
+    if (wasCorrect) {
+        quizQuestionData.correctAnswers++;
+    }
+    // Increment the score counter appropriately
+    updateScoreCounter();
+    // Show the post-answer popup
+    showAnsweredPopup(correctAnswer, wasCorrect);
+}
 
 /**
  * Display the post-answer popup
@@ -60,7 +62,7 @@ function showAnsweredPopup(correctAnswer, wasCorrect) {
     popup.style.display = "flex";
 
     // Get the current question's factoid
-    let factoid = quizQuestionData["questionList"][quizQuestionData["questionIndex"] - 1]["factoid"];
+    let factoid = quizQuestionData.questionList[quizQuestionData.questionIndex - 1].factoid;
 
     // Alter the heading and text based on if the answer was correct or not
     if (wasCorrect) {
@@ -80,27 +82,27 @@ function setupNewQuestion() {
     // Hide the answered popup if it's visible
     document.getElementById("answered-popup").style.display = "none";
     // Get our new question
-    let newQuestion = quizQuestionData["questionList"][quizQuestionData["questionIndex"]]
+    let newQuestion = quizQuestionData.questionList[quizQuestionData.questionIndex];
     // Increment how many questions we've done
-    quizQuestionData["questionIndex"]++;
+    quizQuestionData.questionIndex++;
 
     // Get all the buttons, and shuffle them so we assign answers in a random order
     let buttons = document.getElementsByClassName("ans-button");
     shuffleArray(buttons);
 
     // Change the question number
-    document.getElementById("question-index").innerHTML = "Question " + quizQuestionData["questionIndex"];
+    document.getElementById("question-index").innerHTML = "Question " + quizQuestionData.questionIndex;
 
     // Set the image
-    document.getElementById("question-image").style.background = "url('./assets/images/quiz-images/" + newQuestion["imageName"] + ".webp') no-repeat center center/contain"; 
+    document.getElementById("question-image").style.background = "url('./assets/images/quiz-images/" + newQuestion.imageName + ".webp') no-repeat center center/contain"; 
     // Set the appropriate aria label
-    document.getElementById("question-image").ariaLabel = newQuestion["imageAria"];
+    document.getElementById("question-image").ariaLabel = newQuestion.imageAria;
 
     // Display the question itself
-    document.getElementById("question-text").innerHTML = newQuestion["text"];
+    document.getElementById("question-text").innerHTML = newQuestion.text;
 
     // Clone the list of answers so we're not actually changing it
-    let answerList = newQuestion["answers"].slice();
+    let answerList = newQuestion.answers.slice();
     // Assign an answer to each button
     for (let button of buttons) {
         let ans = answerList.shift();
@@ -115,17 +117,17 @@ function setupNewQuestion() {
  * Pop up the message box for completing the quiz and give it the correct data
  */
 function completeQuiz() {
-    let correctAnswers = quizQuestionData["correctAnswers"];
-    quizQuestionData["completed"] = true;
-    let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
+    let correctAnswers = quizQuestionData.correctAnswers;
+    quizQuestionData.completed = true;
+    let totalQuestionsAnswered = correctAnswers + (quizQuestionData.questionIndex - correctAnswers);
     // Add a personalised comment based on the player's performance
-    let extraComment = "Great job!"
+    let extraComment = "Great job!";
     if (correctAnswers === totalQuestionsAnswered) {
-        extraComment = "Flawless! You're a history master!"
+        extraComment = "Flawless! You're a history master!";
     } else if (correctAnswers === 0) {
-        extraComment = "That's very unfortunate. Maybe try again with the knowledge you've gained?"
+        extraComment = "That's very unfortunate. Maybe try again with the knowledge you've gained?";
     } else if (correctAnswers / totalQuestionsAnswered <= 0.5) {
-        extraComment = "Consider trying the quiz again, using what you've newly learned!"
+        extraComment = "Consider trying the quiz again, using what you've newly learned!";
     }
 
     // Get the quiz-completed popup
@@ -133,16 +135,16 @@ function completeQuiz() {
     // Display the popup
     popup.style.display = "flex";
     // Change the text to be appropriate to the result
-    popup.children[1].innerHTML = `Congratulations! You got ${correctAnswers} of the ${totalQuestionsAnswered} questions correct. ${extraComment}`
+    popup.children[1].innerHTML = `Congratulations! You got ${correctAnswers} of the ${totalQuestionsAnswered} questions correct. ${extraComment}`;
 }
 
 /**
  * Updates the score counter based on how many questions we've answered correctly of the ones we've done
  */
 function updateScoreCounter() {
-    let correctAnswers = quizQuestionData["correctAnswers"];
-    let totalQuestionsAnswered = correctAnswers + (quizQuestionData["questionIndex"] - correctAnswers);
-    document.getElementById("score-text").innerHTML = `Your score: ${correctAnswers} / ${totalQuestionsAnswered}`
+    let correctAnswers = quizQuestionData.correctAnswers;
+    let totalQuestionsAnswered = correctAnswers + (quizQuestionData.questionIndex - correctAnswers);
+    document.getElementById("score-text").innerHTML = `Your score: ${correctAnswers} / ${totalQuestionsAnswered}`;
 }
 
 /** 
@@ -232,7 +234,7 @@ function populateQuestions() {
 function addQuestion(list, questionText, questionAnswers, questionImage, questionAria, questionFactoid) {
     let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, imageAria: questionAria, factoid:questionFactoid};
     // Shuffle the answers so they appear in a random order each time the quiz is played
-    newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
+    newQuestion.answers = shuffleArray(newQuestion.answers);
     // Add the new answer to the question list
     list.push(newQuestion);
 }

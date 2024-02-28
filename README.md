@@ -49,6 +49,29 @@ The three pages are:
 - A quiz page that contains the interactive quiz itself
 - A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
 
+## Validation
+
+### HTML
+All pages on the site are validated with the W3C's Markup Validation Service and show no errors or warnings. See each page below:
+<details><summary>Homepage</summary>
+<img src="docs/validation/html/validation-html-index.png">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/validation/html/validation-html-quiz.png">
+</details>
+<details><summary>404 Page</summary>
+<img src="docs/validation/html/validation-html-404.png">
+</details>
+
+### CSS
+The CSS style used by the site is validated with the W3C's CSS Validation Service, and shows no errors. One warning is presented for the external stylesheet of Google Fonts which cannot be checked. See below:
+<details><summary>No errors</summary>
+<img src="docs/validation/css/validation-css-noerrors.png">
+</details>
+<details><summary>Warning</summary>
+<img src="docs/validation/css/validation-css-warning.png">
+</details>
+
 ## Bugs
 Notable bugs found during development:
 
