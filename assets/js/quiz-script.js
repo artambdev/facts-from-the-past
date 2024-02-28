@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setupNewQuestion();
 });
 
+/**
+ * Triggers on clicking an answer button and determines if the answer is correct
+ * Then, increment score based on correctness and show the post-question popup
+ */
 function onButtonClicked(button) {
     if (quizQuestionData.completed === true || window.getComputedStyle(document.getElementById("answered-popup")).display === "flex" || window.getComputedStyle(document.getElementById("completed-popup")).display === "flex") {
         return;
