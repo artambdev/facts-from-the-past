@@ -78,6 +78,18 @@ The JavaScript code used by the quiz is validated with the JSHint Code Quality T
 <img src="docs/validation/validation-js.png">
 </details>
 
+### Accessibility
+All pages on the site are checked with the WAVE Website Accessibility Evaluation Tool, and show no errors. See each page below:
+<details><summary>Homepage</summary>
+<img src="docs/validation/access/validation-access-index.png">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/validation/access/validation-access-quiz.png">
+</details>
+<details><summary>404 Page</summary>
+<img src="docs/validation/access/validation-access-404.png">
+</details>
+
 ## Bugs
 Notable bugs found during development:
 
