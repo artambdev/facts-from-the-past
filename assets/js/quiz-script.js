@@ -87,6 +87,8 @@ function setupNewQuestion() {
 
     // Set the image
     document.getElementById("question-image").style.background = "url('./assets/images/quiz-images/" + newQuestion["imageName"] + ".webp') no-repeat center center/contain"; 
+    // Set the appropriate aria label
+    document.getElementById("question-image").ariaLabel = newQuestion["imageAria"];
 
     // Display the question itself
     document.getElementById("question-text").innerHTML = newQuestion["text"];
@@ -167,60 +169,70 @@ function populateQuestions() {
         "Who is pictured in the oldest photograph of a US president?",
         ["John Quincy Adams", "James Madison", "Andrew Jackson", "Abraham Lincoln"],
         "mount-rushmore",
+        "An image of Mount Rushmore which has presidents' faces carved into it",
         "A photo of John Quincy Adams dates back to 1843."
     );
     addQuestion(questionsArray,
         "What was the name of the first dog to be launched into orbit by the Soviet Union?",
         ["Laika", "Tsygan", "Dezik", "Yuri"],
         "laika",
+        "An old greyscale image of a dog in a harness",
         "Laika was the first dog in orbit, though Tsygan and Dezik were launched together into sub-orbit before her."
     );
     addQuestion(questionsArray,
         "Alexander the Great was the king of which Ancient Greek kingdom?",
         ["Macedonia", "Illyria", "Paeonia", "Thrace"],
         "alexander",
+        "A painting of a scene with Alexander the Great and several chariots",
         "Alexander III was the king of Macedonia - the other listed kingdoms were its neighbours."
     );
     addQuestion(questionsArray,
         "Which of the following was NOT the code-name of a beach at the 1944 Normandy Landings during World War II?",
         ["Idaho", "Utah", "Gold", "Sword"],
         "normandy",
+        "A photo from the perspective of a soldier at the Normandy landings",
         "The five beaches at Normandy were Utah, Omaha, Gold, Sword and Juno."
     );
     addQuestion(questionsArray,
         "Which of these ancient civilisations was the last to fall?",
         ["Aztec Empire", "Roman Empire", "Byzantine Empire", "Western Xia Empire"],
         "pantheon",
+        "A greyscale image of the Pantheon temple in Rome",
         "The Aztec Empire fell to Spanish conquistadors (soldier-explorers) in 1521."
     );
     addQuestion(questionsArray,
         "How old was Queen Elizabeth II when she was crowned?",
         ["27", "24", "31", "29"],
         "queen-elizabeth",
+        "A photo of Queen Elizabeth in her younger years on a throne",
         "The late queen was 27 when she she was crowned in 1952."
     );
     addQuestion(questionsArray,
         "Which of these countries has the most castles?",
         ["Italy", "Ireland", "France", "Germany"],
         "castle",
+        "An image of a castle on a hillside",
         "Italy has the most castles of any country, with over 45,000!"
     );
     addQuestion(questionsArray,
         "Which Ancient Greek deity was the temple known as the Parthenon dedicated to?",
         ["Athena", "Zeus", "Poseidon", "Demeter"],
         "greek-gods",
+        "A pot with ancient paintings of Greek hero Achilles",
         "The Parthenon was built in thanksgiving to Athena, the war goddess, after a victory against the Persians."
     );
     addQuestion(questionsArray,
         "What type of fabric did Ancient China invent?",
         ["Silk", "Velvet", "Satin", "Lace"],
         "china-textiles",
+        "An image of multicolored textiles",
         "Silk was first produced by Ancient China in the 4th millenium BC, and would only be exported via the Silk Road 3 millenia later."
     );
     addQuestion(questionsArray,
         "Which of these businesses did George Washington establish after his term as president?",
         ["Distillery", "Antique Store", "Law Firm", "Lumberyard"],
         "washington-house",
+        "A hand-drawn picture of Washington's family home",
         "To supplement the dwindling profits from his plantations, George Washington set up a distillery to make whiskey."
     );
     return questionsArray;
@@ -230,8 +242,8 @@ function populateQuestions() {
  * Returns the questions list with one question appended 
  * The first answer should be the "correct" one, the rest are incorrect
  */
-function addQuestion(list, questionText, questionAnswers, questionImage, questionFactoid) {
-    let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, factoid:questionFactoid};
+function addQuestion(list, questionText, questionAnswers, questionImage, questionAria, questionFactoid) {
+    let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, imageAria: questionAria, factoid:questionFactoid};
     // Shuffle the answers so they appear in a random order each time the quiz is played
     newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
     list.push(newQuestion);
