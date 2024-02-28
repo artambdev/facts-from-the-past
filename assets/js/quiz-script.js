@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // For each button, add the code for checking if the answer is correct or not
     for (let button of buttons) {
-        button.addEventListener("click", onButtonClicked(button));
+        button.addEventListener("click", onButtonClicked);
     }
 
     // On clicking the answered-question popup's continue button, set up the next question
@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function() {
  * Triggers on clicking an answer button and determines if the answer is correct
  * Then, increment score based on correctness and show the post-question popup
  */
-function onButtonClicked(button) {
+function onButtonClicked() {
     if (quizQuestionData.completed === true || window.getComputedStyle(document.getElementById("answered-popup")).display === "flex" || window.getComputedStyle(document.getElementById("completed-popup")).display === "flex") {
         return;
     }
     // Get the correct answer (remember: question index has already incremented to the next question by this point)
     let correctAnswer = quizQuestionData.questionList[quizQuestionData.questionIndex - 1].correct;
     // Figure out if the button's corresponding answer was the correct one'
-    let wasCorrect = button.getAttribute("data-answer") === correctAnswer;
+    let wasCorrect = this.getAttribute("data-answer") === correctAnswer;
     // If correct, increment the player's score
     if (wasCorrect) {
         quizQuestionData.correctAnswers++;
