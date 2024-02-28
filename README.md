@@ -64,7 +64,7 @@ All pages on the site are validated with the W3C's Markup Validation Service and
 </details>
 
 ### CSS
-The CSS style used by the site is validated with the W3C's CSS Validation Service, and shows no errors. One warning is presented for the external stylesheet of Google Fonts which cannot be checked. See below:
+The CSS style used by the site was validated with the W3C's CSS Validation Service, and showed no errors. There is one warning for the external stylesheet of Google Fonts which cannot be checked. See below:
 <details><summary>No errors</summary>
 <img src="docs/validation/css/validation-css-noerrors.png">
 </details>
@@ -73,13 +73,13 @@ The CSS style used by the site is validated with the W3C's CSS Validation Servic
 </details>
 
 ### JavaScript
-The JavaScript code used by the quiz is validated with the JSHint Code Quality Tool, showing no errors or warnings.
+The JavaScript code used by the quiz was validated with the JSHint Code Quality Tool, showing no errors or warnings.
 <details><summary>Image</summary>
 <img src="docs/validation/validation-js.png">
 </details>
 
 ### Accessibility
-All pages on the site are checked with the WAVE Website Accessibility Evaluation Tool, and show no errors. See each page below:
+All pages on the site are checked with the WAVE Website Accessibility Evaluation Tool, and none show any errors. See each page below:
 <details><summary>Homepage</summary>
 <img src="docs/validation/access/validation-access-index.png">
 </details>
@@ -88,6 +88,18 @@ All pages on the site are checked with the WAVE Website Accessibility Evaluation
 </details>
 <details><summary>404 Page</summary>
 <img src="docs/validation/access/validation-access-404.png">
+</details>
+
+### Performance
+Google Chrome's Lighthouse feature was used to check every page for performance issues, and each returned a high score in all categories. See each page's result below:
+<details><summary>Homepage</summary>
+<img src="docs/validation/lighthouse/validation-lighthouse-index.png">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/validation/lighthouse/validation-lighthouse-quiz.png">
+</details>
+<details><summary>404 Page</summary>
+<img src="docs/validation/lighthouse/validation-lighthouse-404.png">
 </details>
 
 ## Bugs
