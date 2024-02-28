@@ -47,7 +47,7 @@ The website has 3 pages and (TODO: put a number here) features across them.
 The three pages are:
 - A homepage that users to the site are automatically brought to, explaining the website's purpose and the quiz ahead with a button to begin
 - A quiz page that contains the interactive quiz itself
-- A custom 404 page that users are brought to when sent to an invalid page on the website, which provides a link back to the homepage and offers a button and a link to return to the homepage
+- A custom 404 page that users are brought to when sent to an invalid page on the website, which offers a button to return to the homepage
 
 ## Validation
 
