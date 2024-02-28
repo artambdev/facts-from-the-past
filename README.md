@@ -72,6 +72,12 @@ The CSS style used by the site is validated with the W3C's CSS Validation Servic
 <img src="docs/validation/css/validation-css-warning.png">
 </details>
 
+### JavaScript
+The JavaScript code used by the quiz is validated with the JSHint Code Quality Tool, showing no errors or warnings.
+<details><summary>Image</summary>
+<img src="docs/validation/validation-js.png">
+</details>
+
 ## Bugs
 Notable bugs found during development:
 
