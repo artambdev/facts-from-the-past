@@ -168,6 +168,7 @@ main {
 
 /* Text of the question itself */
 #question-text {
+    /* Standard: center plus add some padding for breathing space */
     text-align: center;
     padding: 1rem 0;
 }
@@ -187,7 +188,9 @@ main {
 
 /* All answer buttons A to D */
 .ans-button {
+    /* Take up the entire width of the screen */
     width: 100%;
+    /* Keep consistent, large size typically covers almost half the screen */
     min-height: 6rem;
     font-size: 150%;
     /* Outset border */
@@ -243,6 +246,7 @@ main {
 /* Correct or incorrect header of answer popup */
 #answered-header {
     text-align: center;
+    /* Make it stand out more */
     text-decoration: underline;
     padding: 1rem;
 }
@@ -295,6 +299,7 @@ main {
 /* "Quiz Completed!" header of the popup */
 #completed-header {
     text-align: center;
+    /* Celebration! Underline for emphasis */
     text-decoration: underline;
     padding: 1rem;
 }
@@ -308,7 +313,9 @@ main {
 /* Div containing the buttons to retry or return */
 #completed-button-area {
     width: 60%;
+    /* Flex properties */
     display: flex;
+    /* Place the buttons evenly side by side */
     align-items: center;
     justify-content: space-evenly;
 }
@@ -349,7 +356,9 @@ main {
     align-items:center;
 }
 
+/* Footer's footnote */
 footer p {
+    /* Some padding so it has distance from the screen's edge */
     padding: 20px;
 }
 
