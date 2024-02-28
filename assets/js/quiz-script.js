@@ -233,6 +233,7 @@ function addQuestion(list, questionText, questionAnswers, questionImage, questio
     let newQuestion = {text:questionText, answers:questionAnswers, correct:questionAnswers[0], imageName:questionImage, imageAria: questionAria, factoid:questionFactoid};
     // Shuffle the answers so they appear in a random order each time the quiz is played
     newQuestion["answers"] = shuffleArray(newQuestion["answers"]);
+    // Add the new answer to the question list
     list.push(newQuestion);
 }
 
