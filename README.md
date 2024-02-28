@@ -213,6 +213,169 @@ Each page has been tested to work on:
 ### Device Compatibility
 Each page was tested on Mozilla Firefox and Google Chrome's developer tools for responsive design. Testing was done on a desktop PC running Windows 11 and a Galaxy A50 phone.
 
+### Testing User Stories
+Below is a list of user stories and the process by which they are fulfilled:
+
+### User: Visitor
+- 1. As a visitor, I want an explanation on what the website is about
+- 2. As a visitor, I want to be able to easily navigate between pages
+- 3. As a visitor, I want to be presented questions in an appealing way
+- 4. As a visitor, I want to be congratulated for correct answers
+- 5. As a visitor, I want to see how I'm doing on the quiz so far
+- 6. As a visitor, I want answering questions to be easy and intuitive
+- 7. As a visitor, I want feedback on whether my answers are correct or not
+- 8. As a visitor, I want to easily play the quiz again to get a better score
+- 9. As a visitor, I want to have a different experience when repeating the quiz
+
+### User: Site Owner
+- 10. As the site owner, I want the site's brand to stand out and be memorable
+- 11. As the site owner, I want people to understand the purpose of the site and quiz
+- 12. As the site owner, I want to encourage visitors to play the quiz multiple times
+- 13. As the site owner, I want visitors to be encouraged to continue even if they fail
+- 14. As the site owner, I want to tell people who created the website
+
+1. As a visitor, I want an explanation on what the website is about
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Introduction | Navigate to the homepage, locate the introduction section | Find a description of the website and quiz | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-1.png">
+</details>
+
+2. As a visitor, I want to be able to easily navigate between pages
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Take Quiz button | Navigate to the homepage, click the Take Quiz button | Go to the quiz | Works as expected |
+| Back button | On the quiz page, click the left chevron | Go back to the homepage | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-2.png">
+</details>
+
+3. As a visitor, I want to be presented questions in an appealing way
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Question information | Navigate to the quiz page, find the question image and text | Find a question and an accompanying image | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-3.png">
+</details>
+
+4. As a visitor, I want to be congratulated for correct answers
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Answer popup | Navigate to the quiz page, click the correct answer | Get a congratulation blurb and increased score | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-4.png">
+</details>
+
+5. As a visitor, I want to see how I'm doing on the quiz so far
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Quiz progress | Navigate to the quiz page, find the question counter and score counter | Find how many questions have been answered and how many were correct | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-5-1.png">
+<img src="docs/validation/user-stories/story-5-2.png">
+</details>
+
+6. As a visitor, I want answering questions to be easy and intuitive
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Answer buttons | Navigate to the quiz page, click on a button | Immediately select an answer to the question | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-6.png">
+</details>
+
+7. As a visitor, I want feedback on whether my answers are correct or not
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Answer popup | Navigate to the quiz page, click on a button | Receive feedback on if the answer was correct and if not, what it should have been | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-2.png">
+</details>
+
+8. As a visitor, I want to easily play the quiz again to get a better score
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Quiz completion popup | Navigate to the quiz page, answer 10 questions | Have a button to click to replay the quiz | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-4.png">
+</details>
+
+9. As a visitor, I want to have a different experience when repeating the quiz
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Quiz page | Navigate to the quiz page, refresh the page | The questions appear in a different order | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-9.png">
+</details>
+
+10. As the site owner, I want the site's brand to stand out and be memorable
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Scroll to the bottom of the page, and click the Amazon icon | Be taken to a page to buy books online | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-10.png">
+</details>
+
+11. As the site owner, I want people to understand the purpose of the site and quiz
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Introduction | Navigate to the homepage, locate the introduction section | Find a description of the website and quiz | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-1.png">
+</details>
+
+12. As the site owner, I want to encourage visitors to play the quiz multiple times
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Quiz page | Navigate to the quiz page, refresh the page | The questions appear in a different order | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-9.png">
+</details>
+
+13. As the site owner, I want visitors to be encouraged to continue even if they fail
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Answer popup | Navigate to the quiz page, click an incorrect answer | Get a message and explanation of the correct answer | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-4.png">
+</details>
+
+14. As the site owner, I want to tell people who created the website
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Navigate to the bottom of the page | Find a note about the site owner | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/validation/user-stories/story-14.png">
+</details>
+
 ## Bugs
 Notable bugs found during development:
 
