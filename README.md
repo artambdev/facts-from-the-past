@@ -282,8 +282,7 @@ Below is a list of user stories and the process by which they are fulfilled:
 | Quiz progress | Navigate to the quiz page, find the question counter and score counter | Find how many questions have been answered and how many were correct | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/user-stories/story-5-1.png">
-<img src="docs/validation/user-stories/story-5-2.png">
+<img src="docs/validation/user-stories/story-5.png">
 </details>
 
 6. As a visitor, I want answering questions to be easy and intuitive
@@ -293,7 +292,7 @@ Below is a list of user stories and the process by which they are fulfilled:
 | Answer buttons | Navigate to the quiz page, click on a button | Immediately select an answer to the question | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/user-stories/story-6.png">
+<img src="docs/validation/user-stories/story-4.png">
 </details>
 
 7. As a visitor, I want feedback on whether my answers are correct or not
@@ -303,7 +302,7 @@ Below is a list of user stories and the process by which they are fulfilled:
 | Answer popup | Navigate to the quiz page, click on a button | Receive feedback on if the answer was correct and if not, what it should have been | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/user-stories/story-2.png">
+<img src="docs/validation/user-stories/story-4.png">
 </details>
 
 8. As a visitor, I want to easily play the quiz again to get a better score
@@ -313,14 +312,14 @@ Below is a list of user stories and the process by which they are fulfilled:
 | Quiz completion popup | Navigate to the quiz page, answer 10 questions | Have a button to click to replay the quiz | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/validation/user-stories/story-4.png">
+<img src="docs/validation/user-stories/story-8.png">
 </details>
 
 9. As a visitor, I want to have a different experience when repeating the quiz
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Quiz page | Navigate to the quiz page, refresh the page | The questions appear in a different order | Works as expected |
+| Quiz page | Navigate to the quiz page, back to the index via the back button, then back to the quiz | The questions appear in a different order | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/user-stories/story-9.png">
@@ -330,7 +329,7 @@ Below is a list of user stories and the process by which they are fulfilled:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | Scroll to the bottom of the page, and click the Amazon icon | Be taken to a page to buy books online | Works as expected |
+| Footer | Locate the logo on each page | Find the website's brand displayed prominently | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/user-stories/story-10.png">
@@ -350,7 +349,7 @@ Below is a list of user stories and the process by which they are fulfilled:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Quiz page | Navigate to the quiz page, refresh the page | The questions appear in a different order | Works as expected |
+| Quiz page | Navigate to the quiz page, back to the index via the back button, then back to the quiz | The questions appear in a different order | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/validation/user-stories/story-9.png">
@@ -421,7 +420,7 @@ Technology used:
 - Version control: GitHub
 - Deployment: GitHub's Pages feature
 - Wireframing: Balsamiq
-- Validation: W3C HTML Validator, W3C CSS Validator, WAVE Website Accessibility Evaluation Tool, Google Chrome
+- Validation: W3C HTML Validator, W3C CSS Validator, JSHints Code Quality Tool, WAVE Website Accessibility Evaluation Tool, Google Chrome
 - Art program: paint.net
 - Color palette design: <a href="https://mycolor.space">ColorSpace</a>
 
