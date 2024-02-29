@@ -32,7 +32,7 @@
 Facts From the Past is an interactive website that aims to teach fun facts about history in an appealing way. Visitors are given a ten-question quiz on a variety of topics with a choice of four answers to pick from. Correct or incorrect, they are also offered tidbits of explanation behind the event or fact in question. Encouraging messages accompany their progress. The quiz can be replayed, with questions and answers shuffled into a new order to keep the player on their toes.
 
 ## User Stories
-The website is designed for two possible users and X user stories:
+The website is designed for two possible users and 14 user stories:
 
 ### User: Visitor
 - 1. As a visitor, I want an explanation on what the website is about
@@ -52,7 +52,25 @@ The website is designed for two possible users and X user stories:
 - 13. As the site owner, I want visitors to be encouraged to continue even if they fail
 - 14. As the site owner, I want to tell people who created the website
 
+## Design
+A few wireframes were made in advance of starting development to plan out the most important features and the structure of code that would be required to accompany them.
+
+The wireframes are presented below:
+
+### Colour
+- A pleasant pattern of light lilac with pink highlights is meant to evoke a kind feeling to the quiz rather than a stressful one, a fun game rather than a test. Answer buttons are given different colours to distinguish them, with popups using gold colouration to indicate forwards progress.
+
+### Font
+- Headings use the Noto Sans font while other text uses the Lato font. Both are popular sans-serif fonts that are easy to read and suitable for viewing on screens. In case of a failure to load, they both default to the browser's default sans-serif font.
+
 ## Features
+The website has 3 pages and 10 features across them.
+
+### Pages
+The three pages are:
+- A homepage that users to the site are automatically brought to, explaining the website's purpose and the quiz ahead with a button to begin
+- A quiz page that contains the interactive quiz itself
+- A custom 404 page that users are brought to when sent to an invalid page on the website, which offers a button to return to the homepage
 
 ### Header
 ![Image of the header on desktop](docs/features/header.png)
@@ -130,26 +148,6 @@ The website is designed for two possible users and X user stories:
 - A gold button offers to retry the quiz, and reloads the page when clicked to restart the quiz with a new random sequence.
 - User stories: 8, 12
 
-## Design
-A few wireframes were made in advance of starting development to plan out the most important features and the structure of code that would be required to accompany them.
-
-The wireframes are presented below:
-
-### Colour
-- A pleasant pattern of light lilac with pink highlights is meant to evoke a kind feeling to the quiz rather than a stressful one, a fun game rather than a test. Answer buttons are given different colours to distinguish them, with popups using gold colouration to indicate forwards progress.
-
-### Font
-- Headings use the Noto Sans font while other text uses the Lato font. Both are popular sans-serif fonts that are easy to read and suitable for viewing on screens. In case of a failure to load, they both default to the browser's default sans-serif font.
-
-## Features
-The website has 3 pages and (TODO: put a number here) features across them.
-
-### Pages
-The three pages are:
-- A homepage that users to the site are automatically brought to, explaining the website's purpose and the quiz ahead with a button to begin
-- A quiz page that contains the interactive quiz itself
-- A custom 404 page that users are brought to when sent to an invalid page on the website, which offers a button to return to the homepage
-
 ## Validation
 
 ### HTML
@@ -215,24 +213,6 @@ Each page was tested on Mozilla Firefox and Google Chrome's developer tools for 
 
 ### Testing User Stories
 Below is a list of user stories and the process by which they are fulfilled:
-
-### User: Visitor
-- 1. As a visitor, I want an explanation on what the website is about
-- 2. As a visitor, I want to be able to easily navigate between pages
-- 3. As a visitor, I want to be presented questions in an appealing way
-- 4. As a visitor, I want to be congratulated for correct answers
-- 5. As a visitor, I want to see how I'm doing on the quiz so far
-- 6. As a visitor, I want answering questions to be easy and intuitive
-- 7. As a visitor, I want feedback on whether my answers are correct or not
-- 8. As a visitor, I want to easily play the quiz again to get a better score
-- 9. As a visitor, I want to have a different experience when repeating the quiz
-
-### User: Site Owner
-- 10. As the site owner, I want the site's brand to stand out and be memorable
-- 11. As the site owner, I want people to understand the purpose of the site and quiz
-- 12. As the site owner, I want to encourage visitors to play the quiz multiple times
-- 13. As the site owner, I want visitors to be encouraged to continue even if they fail
-- 14. As the site owner, I want to tell people who created the website
 
 1. As a visitor, I want an explanation on what the website is about
 
