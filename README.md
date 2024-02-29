@@ -57,6 +57,11 @@ A few wireframes were made in advance of starting development to plan out the mo
 
 The wireframes are presented below:
 
+![Image of the index's mobile wireframe](docs/wireframes/wireframe-index.png)
+![Image of the quiz's mobile wireframe](docs/wireframes/wireframe-quiz.png)
+![Image of the quiz's mobile wireframe with the quiz completion popup](docs/wireframes/wireframe-quiz2.png)
+![Image of the quiz's desktop wireframe](docs/wireframes/wireframe-desktop.png)
+
 ### Colour
 - A pleasant pattern of light lilac with pink highlights is meant to evoke a kind feeling to the quiz rather than a stressful one, a fun game rather than a test. Answer buttons are given different colours to distinguish them, with popups using gold colouration to indicate forwards progress.
 
